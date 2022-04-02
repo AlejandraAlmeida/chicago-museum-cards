@@ -8,7 +8,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
 const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
+  position: 'absolute',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
@@ -52,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box color="Warning"sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar position="relative">
             <Search>
@@ -67,10 +67,10 @@ export default function SearchAppBar() {
 
             <Typography
                 variant="h6"
-                position="absolute"
+                textAlign="center"
                 noWrap
                 component="div"
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, marginLeft: '50%'}}
+                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }}}
             >
                 Chicago Museum Cards
             </Typography>
