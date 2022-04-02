@@ -1,11 +1,11 @@
 import axios from 'axios'
+import { ArtWorksResponse } from './model'
 
-const getArtWorkApi = async () => {
+const getArtWorkApi = async (): Promise<ArtWorksResponse> => {
   const url = `${process.env.REACT_APP_HOST_NAME_API}/artworks`
-  console.log(url, '000000000000')
   return await axios.get(url)
     .then(res => {
-      console.log('Successfully call')
+      console.log('Successfully getArtWorkApi call')
       return res.data
     })
     .catch((err) => {

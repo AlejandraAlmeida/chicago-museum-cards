@@ -1,17 +1,19 @@
 
 export interface ArtWorksResponse {
- pagination: Pagination;
+ pagination: any;
  data: ArtWorkItem [];
+ info: any;
+ config:any;
 }
 // TODO fix pagination
-export interface Pagination {
-    total: number;
-    limit: number;
-    offset: number;
-    total_pages: number;
-    current_page: number;
-    next_url: string
-}
+// export interface Pagination {
+//     total: number;
+//     limit: number;
+//     offset: number;
+//     total_pages: number;
+//     current_page: number;
+//     next_url: string
+// }
 export interface ArtWorkItem{
     id: number;
     title: string;
