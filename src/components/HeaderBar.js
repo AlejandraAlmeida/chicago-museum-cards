@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { useNavigate } from "react-router";
 
 import AppBar from "@mui/material/AppBar";
@@ -37,7 +35,7 @@ export default function Header() {
           )}
 
           <Typography
-            variant="h6"
+            variant="h4"
             textAlign="center"
             noWrap
             component="div"
