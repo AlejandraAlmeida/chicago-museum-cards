@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Component } from 'react';
 
 import  Home  from './pages/Home';
-import  Navigation  from './components/Navigation';
+import  Header  from './components/HeaderBar';
 import  Details  from './pages/Details';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
         return (
             <Router>
                 <div className='App'>
-                    <Navigation/>
+                    <Header/>
                     <Routes>
                         <Route path="/" element={<Home/>}></Route> 
                         <Route path="/details" element={<Details/>}></Route> 
