@@ -1,6 +1,6 @@
 // import { ArtWorkItem } from './model'
 
-const getArtWorkMapper = (apiResponse) => {
+const getArtWorkMapper = (apiResponse: any) => {
 //   const artWorks: ArtWorkItem[] = {
 
   // }
