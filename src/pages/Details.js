@@ -1,18 +1,15 @@
-import { useNavigate } from "react-router";
-
+import { useNavigate } from 'react-router'
 
 const Details = () => {
+  const navigate = useNavigate()
 
-    const navigate = useNavigate();
+  return (
+    <div>
+      <h1>Heeeeyyyy Details page</h1>
 
-        return (
-            <div>
-                <h1>Heeeeyyyy Details page</h1>
-
-                <button onClick={()=>navigate('/')}>Ir a Home</button>
-            </div>
-        )
-
+      <button onClick={() => navigate('/')}>Ir a Home</button>
+    </div>
+  )
 }
 
 export default Details
