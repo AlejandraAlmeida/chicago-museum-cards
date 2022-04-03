@@ -7,6 +7,7 @@ const Home = () => {
   const apiCall = () => {
     console.log(getArtWorkService())
   }
+
   return (
     <div>
       <h1>Heeeeyyyy Home</h1>
