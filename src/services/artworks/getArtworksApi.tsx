@@ -1,7 +1,6 @@
 import axios from 'axios'
-import { ArtWorksResponse } from './model'
 
-const getArtWorkApi = async (): Promise<ArtWorksResponse> => {
+const getArtWorkApi = async (): Promise<any> => {
   const url = `${process.env.REACT_APP_HOST_NAME_API}/artworks`
   return await axios.get(url)
     .then(res => {

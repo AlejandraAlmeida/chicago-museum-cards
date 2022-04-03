@@ -1,4 +1,4 @@
-import getArtWorkMapper from './getArtWorkMapper'
+import getArtWorkMapper from './getArtWorksMapper'
 import getArtWorkApi from './getArtworksApi'
 
 const getArtWorkService = () => {

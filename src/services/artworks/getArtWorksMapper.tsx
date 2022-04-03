@@ -1,9 +1,9 @@
 
-import { ArtWorkItem } from './model'
+import { ArtWorkMappedItem } from './model'
 
-const getArtWorkMapper = (apiResponse: any):ArtWorkItem[] => {
+const getArtWorksMapper = (apiResponse: any):ArtWorkMappedItem[] => {
   console.log('Mapping - getArtWorkMapper')
-  const artWorks: ArtWorkItem[] = apiResponse.map((i:any) => {
+  const artWorks: ArtWorkMappedItem[] = apiResponse.map((i:any) => {
     return {
       id: i.id,
       title: i.title,
@@ -20,4 +20,4 @@ const getArtWorkMapper = (apiResponse: any):ArtWorkItem[] => {
   console.log(artWorks)
   return artWorks
 }
-export default getArtWorkMapper
+export default getArtWorksMapper

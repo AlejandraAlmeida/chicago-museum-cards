@@ -1,7 +1,7 @@
 
 export interface ArtWorksResponse {
  pagination: any;
- data: ArtWorkItem [];
+ data: any;
  info: any;
  config:any;
 }
@@ -14,7 +14,7 @@ export interface ArtWorksResponse {
 //     current_page: number;
 //     next_url: string
 // }
-export interface ArtWorkItem{
+export interface ArtWorkMappedItem{
     id: number;
     title: string;
     dateDisplay: string;
