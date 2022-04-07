@@ -5,8 +5,8 @@ import getArtWorkService from '../services/artworks/getArtWorkService'
 const Home = () => {
   let artworks = []
   const [imgUrl, setImgUrl] = useState('')
-  // eslint-disable-next-line  no-unused-vars
   const navigate = useNavigate()
+
   useEffect(() => {
     getArtWorkService().then((res) => {
       artworks = [...res]
@@ -14,10 +14,8 @@ const Home = () => {
       setImgUrl(
         `${process.env.REACT_APP_HOST_IMAGES_API}/${res[0].imageId}/full/843,/0/default.jpg`
       )
-      // imgUrl ? console.log(imgUrl) : ''
     })
   })
-  // eslint-disable-next-line  no-unused-vars
 
   return (
     <div>
