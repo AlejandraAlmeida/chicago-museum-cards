@@ -11,13 +11,9 @@ const Home = () => {
 
   useEffect(() => {
     getArtWorkService().then((res) => {
-      setArtworks([...res] as any)
-      console.log(artworks, 'heeeeeeey')
-      // setImgUrl(
-      //   `${process.env.REACT_APP_HOST_IMAGES_API}/${res[0].imageId}/full/843,/0/default.jpg`
-      // )
+      setArtworks(res as any)
     })
-  })
+  }, [])
 
   return (
     <div>
