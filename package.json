@@ -27,7 +27,7 @@
   "scripts": {
     "start": "env-cmd -f .env react-scripts start",
     "build": "env-cmd -f .env react-scripts build",
-    "lint": "npx eslint . --ext .js --ext .ts --fix",
+    "lint": "npx eslint . --ext .js --ext .ts --ext .tsx --fix",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
