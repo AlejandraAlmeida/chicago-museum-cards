@@ -25,7 +25,8 @@ export interface ArtWorkMappedItem{
     departmentTitle: string;
     artistId: number;
     styleTitles: string[];
-    imageId: string
+    imageId: string,
+    altText: string;
 }
 export interface Color {
     h: number;

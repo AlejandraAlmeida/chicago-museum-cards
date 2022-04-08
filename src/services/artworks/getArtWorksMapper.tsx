@@ -7,6 +7,8 @@ const getArtWorksMapper = (apiResponse: any):ArtWorkMappedItem[] => {
     return {
       id: i.id,
       title: i.title,
+      imageId: i.image_id,
+      altText: i.alt_text,
       artistName: i.artist_title,
       dateDisplay: i.date_display,
       dimensions: i.dimensions,
@@ -14,8 +16,7 @@ const getArtWorksMapper = (apiResponse: any):ArtWorkMappedItem[] => {
       color: i.color,
       departmentTitle: i.department_title,
       artistId: i.artist_id,
-      styleTitles: i.style_titles,
-      imageId: i.image_id
+      styleTitles: i.style_titles
     }
   })
   console.log(artWorks)

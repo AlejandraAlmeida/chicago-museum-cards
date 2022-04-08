@@ -35,7 +35,7 @@ const CardsGrid = (props: aProps) => {
                   component="img"
                   height="140"
                   image={`https://www.artic.edu/iiif/2/${i.imageId}/full/843,/0/default.jpg`}
-                  alt="green iguana"
+                  alt={i.altText}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h6" component="div">
