@@ -17,6 +17,7 @@ export interface ArtWorksResponse {
 export interface ArtWorkMappedItem{
     id: number;
     title: string;
+    artistName: string;
     dateDisplay: string;
     dimensions: string;
     technique: string; // medium-display
