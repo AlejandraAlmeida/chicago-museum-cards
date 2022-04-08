@@ -17,6 +17,7 @@ export interface ArtWorksResponse {
 export interface ArtWorkMappedItem{
     id: number;
     title: string;
+    artistName: string;
     dateDisplay: string;
     dimensions: string;
     technique: string; // medium-display
@@ -24,7 +25,8 @@ export interface ArtWorkMappedItem{
     departmentTitle: string;
     artistId: number;
     styleTitles: string[];
-    imageId: string
+    imageId: string,
+    altText: string;
 }
 export interface Color {
     h: number;

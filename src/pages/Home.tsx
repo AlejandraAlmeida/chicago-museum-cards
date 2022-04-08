@@ -1,27 +1,28 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+// import { useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import getArtWorkService from '../services/artworks/getArtWorkService'
+import CardsGrid from '../components/CardsGrid'
+import Box from '@mui/material/Box'
+// import { ArtWorkMappedItem } from '../services/artworks/model'
 
 const Home = () => {
-  let artworks = []
-  const [imgUrl, setImgUrl] = useState('')
+  const [artworks, setArtworks] = useState([])
   const navigate = useNavigate()
 
   useEffect(() => {
     getArtWorkService().then((res) => {
-      artworks = [...res]
-      console.log(artworks, 'heeeeeeey')
-      setImgUrl(
-        `${process.env.REACT_APP_HOST_IMAGES_API}/${res[0].imageId}/full/843,/0/default.jpg`
-      )
+      setArtworks(res as any)
     })
-  })
+  }, [])
 
   return (
     <div>
-      <h1>Heeeeyyyy Home</h1>
+        {/* TODO: add local time of last DDBB update */}
       <button onClick={() => navigate('/details')}>Ir a details</button>
-      <div>{imgUrl && <img src={imgUrl} alt='cositas' />}</div>
+      <Box sx={{ mt: 5 }}>
+        {artworks.length > 0 ? <CardsGrid artworkList={artworks} /> : ''}
+      </Box>
     </div>
   )
 }
