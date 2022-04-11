@@ -1,9 +1,9 @@
 import getArtWorkMapper from './getArtWorksMapper'
 import getArtWorkApi from './getArtworksApi'
 
-const getArtWorkService = () => {
+const getArtWorkService = (page:number) => {
   console.log('Calling getArtWorkService')
-  return getArtWorkApi()
+  return getArtWorkApi(page)
     .then(res => {
       return getArtWorkMapper(res.data)
     })
