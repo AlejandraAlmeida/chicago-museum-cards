@@ -16,10 +16,12 @@ describe('getArtWorkService', () => {
     }
     )
     const mapperSpy = jest.spyOn(GetArtWorksMapper, 'default')
-    const res = await getArtWorkService()
+    const res = await getArtWorkService(1)
     expect(apiSpy).toBeCalled()
     expect(mapperSpy).toBeCalled()
     expect(res).toEqual([{
+      altText: undefined,
+      artistName: 'Claude Monet',
       artistId: 35809,
       color: {
         h: 6,

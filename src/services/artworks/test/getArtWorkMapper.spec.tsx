@@ -5,6 +5,8 @@ describe('getArtWorkMapper', () => {
   it('Should map api response', () => {
     const mapper = getArtWorkMapper(apiResponseExample)
     expect(mapper).toEqual([{
+      altText: undefined,
+      artistName: 'Claude Monet',
       artistId: 35809,
       color: {
         h: 6,
@@ -25,18 +27,8 @@ describe('getArtWorkMapper', () => {
       title: 'Arrival of the Normandy Train, Gare Saint-Lazare'
     }])
   })
-  it('Should map from empty response', () => {
+  it('Shouldn\'t map if imageId is missing ', () => {
     const mapper = getArtWorkMapper([{}])
-    expect(mapper).toEqual([
-      {
-        artistId: undefined,
-        color: undefined,
-        dateDisplay: undefined,
-        departmentTitle: undefined,
-        dimensions: undefined,
-        id: undefined,
-        imageId: undefined
-      }
-    ])
+    expect(mapper).toEqual([])
   })
 })

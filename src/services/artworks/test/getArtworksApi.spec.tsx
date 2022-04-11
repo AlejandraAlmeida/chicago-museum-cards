@@ -8,6 +8,7 @@ describe('getArtWorkApi', () => {
     jest.resetAllMocks()
   })
   it('Should return data from Api', async () => {
+    process.env.REACT_APP_HOST_ARTWORKS_LIMIT = '12'
     const axiosSpy = jest.spyOn(axios, 'get').mockResolvedValue({
       data: {
         pagination: {},
@@ -16,16 +17,16 @@ describe('getArtWorkApi', () => {
         data: apiResponseExample
       }
     })
-    expect(await getArtWorkApi()).toEqual({
+    expect(await getArtWorkApi(1)).toEqual({
       pagination: {},
       info: {},
       config: {},
       data: apiResponseExample
     })
-    expect(axiosSpy).toHaveBeenCalledWith('www.mock-url/artworks')
+    expect(axiosSpy).toHaveBeenCalledWith('www.mock-url/artworks', { params: { limit: '12', page: 1 } })
   })
   it('Should return data from Api', async () => {
     jest.spyOn(axios, 'get').mockRejectedValue({ })
-    await expect(getArtWorkApi()).rejects.toThrowError('API fails')
+    await expect(getArtWorkApi(1)).rejects.toThrowError('API fails')
   })
 })
