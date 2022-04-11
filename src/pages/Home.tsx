@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-// import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import getArtWorkService from '../services/artworks/getArtWorkService'
 import CardsGrid from '../components/CardsGrid'
@@ -9,6 +8,7 @@ import { ArtWorkMappedItem } from '../services/artworks/model'
 export interface HomeProps {
   page: number
 }
+
 const Home = () => {
   const [artworks, setArtworks] = useState<ArtWorkMappedItem[]>([])
   const navigate = useNavigate()
@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div>
         {/* TODO: add local time of last DDBB update */}
-      <button onClick={() => navigate('/details')}>Ir a details</button>
+      <button onClick={() => navigate('/details')}>Go to details</button>
       <Box sx={{ mt: 5 }}>
         {artworks.length > 0 ? <CardsGrid artworkList={artworks} /> : ''}
         <BackToTop window={() => window} />
