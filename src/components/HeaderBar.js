@@ -19,7 +19,7 @@ export default function Header () {
 
   return (
     <Box color="Warning" sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" id="back-to-top-anchor" >
         <Toolbar position="relative">
           {currentURL !== '/' && (
             <IconButton
