@@ -27,17 +27,24 @@ const CardsGrid = (props: aProps) => {
           <Grid item xs={2} sm={4} md={4} key={k}>
             <Card>
               <CardActionArea
-                onClick={() => {
-                  console.log('hey')
-                }}
+                onClick={() => navigate('/details', { state: { ...i } })}
               >
                 <CardMedia
                   component="img"
                   height="140"
                   image={`https://www.artic.edu/iiif/2/${i.imageId}/full/843,/0/default.jpg`}
                   alt={i.altText}
+                  sx={{
+                    '&:hover': {
+                      transition: 'all .2s ease-in-out',
+                      transform: 'scale(1.5, 1.5)'
+                    }
+                  }}
                 />
-                <CardContent>
+                <CardContent
+                sx={{
+                // TODO: fix div
+                }}>
                   <Typography gutterBottom variant="h6" component="div">
                     {i.title}
                   </Typography>

@@ -1,8 +1,9 @@
-import { useNavigate } from 'react-router'
+import { useNavigate, useLocation } from 'react-router'
 
-const Details = () => {
+const Details = (props: any) => {
   const navigate = useNavigate()
-
+  const { state } = useLocation()
+  console.log(state)
   return (
     <div>
       <h1>Heeeeyyyy Details page</h1>
