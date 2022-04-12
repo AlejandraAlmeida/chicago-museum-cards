@@ -13,6 +13,7 @@ export default function Header () {
 
   const returnHome = () => {
     if (currentURL !== '/') {
+      document.body.style.backgroundImage = ''
       return navigate('/')
     }
   }
@@ -20,7 +21,7 @@ export default function Header () {
   return (
     <Box color="Warning" sx={{ flexGrow: 1 }}>
       <AppBar position="static" id="back-to-top-anchor" >
-        <Toolbar position="relative">
+        <Toolbar>
           {currentURL !== '/' && (
             <IconButton
               size="large"
