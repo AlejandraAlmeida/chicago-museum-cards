@@ -14,6 +14,7 @@ const Home = () => {
   let page = 1
 
   useEffect(() => {
+    document.body.style.backgroundImage = ''
     getArtWorkService(page).then((res) => {
       setArtworks(res)
     })
